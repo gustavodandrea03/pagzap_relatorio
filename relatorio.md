@@ -137,12 +137,14 @@ Calcular custos de forma mais precisa, incluindo insumos detalhados.
 Integrar relatórios de desempenho histórico (semanal/mensal).
 
 
-
-
-///////////////// SEM ALTERAÇÃO //////////////////
 ## Referências Bibliográficas
-Lista de todo material bibliográfico utilizado para a realização deste documento, incluindo: livros, sites, artigos, etc.
 
-Exemplo:
+Dados do SEBRAE sobre o fechamento de restaurantes
+Segundo a Associação Brasileira de Bares e Restaurantes (Abrasel), de cada 100 estabelecimentos abertos nesse setor, 35 fecham em até dois anos. 
+Sebrae
+https://sebrae.com.br/sites/PortalSebrae/artigos/os-ingredientes-para-abrir-um-restaurante-sem-prazo-de-validade%2C0667db5cc9d41810VgnVCM100000d701210aRCRD?utm_source=chatgpt.com
 
-WAZLAWICK, Raul Sidnei. Metodologia de pesquisa para ciência da computação. Rio de Janeiro: Elsevier, 2009
+📚 Referência teórica de Kotler & Keller (2012)
+
+O livro "Administração de Marketing" de Philip Kotler e Kevin Lane Keller (14ª edição, 2012) aborda a importância de decisões estratégicas baseadas em dados confiáveis para garantir competitividade e sustentabilidade em negócios de serviços. 
+Biblioteca UnISCED
