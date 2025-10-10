@@ -77,50 +77,69 @@ Essa abordagem oferece aos gestores uma visão clara e prática do desempenho do
 
 ## Arquitetura
 
-Este tópico deve apontar para o repositório que contém a listagem de artefatos que foram gerados ao longo do desenvolvimento do sistema.
+Arquitetura
 
-A figura abaixo ilustra uma visão geral de arquitetura (camadas do sistema)
+O projeto está organizado em camadas simples, refletindo uma arquitetura cliente-servidor:
 
-![image](https://github.com/user-attachments/assets/9a0fc9b4-0aeb-4246-a863-06eefcf19758)
+Camada de Apresentação (Front-end): interfaces web desenvolvidas em HTML, CSS e JavaScript, acessíveis por navegadores.
 
-Exemplo de visão geral da arquitetura do sistema.
+Camada de Aplicação (Back-end): servidor em Node.js com Express, responsável por rotas de pedidos, integração com pagamentos e geração de relatórios.
 
-Devem ser realizados no mínimo 5 artefatos.
+Camada de Dados: persistência em db.json (simulação de banco local), podendo evoluir para MySQL em produção.
 
-A seguir são apresentados exemplos de artefatos que podem ser apresentados:
-* Benchmarking (tabela comparativa)
-* Project Model Canvas, Business Model Canvas, MVP Canvas
-* Personas
-* Casos de uso, histórias do usuário, classes de teste; lista de backlog, entre outros
-* Diagrama ER, XML schema, JSON schema
-* Protótipos de interface, sitemaps, wireframes de baixa fidelidade, wireflows
-* Listagem de componentes reutilizados e detalhamento de sua aplicação no projeto
-* Documentação de processos de verificação e validação: sprint review, sprint retrospective, status report
-* Registros/atas de reunião com stakeholders
-* Plano de Negócios
-
-Exemplos de repositórios:
+Serviços Externos: integração com a API Mercado Pago (pagamentos sandbox).
 
 
-[https://github.com/gbmachado/projetoFinal](https://github.com/gbmachado/projetoFinal)
-
-[https://github.com/fga-eps-mds/2018.1-IncluCare](https://github.com/fga-eps-mds/2018.1-IncluCare)
 
 ## Validação
-Aqui, deve-se apresentar um resumo de como será feita a validação do sistema e como ela irá implicar no desenvolvimento do projeto e no resultado final.
+Validação
+
+A validação do sistema será realizada em duas etapas:
+
+Testes funcionais: criação de pedidos, pagamentos simulados via Mercado Pago Sandbox e análise automática de vendas.
+
+Avaliação com usuários reais: pesquisa com  gestores e funcionários de restaurantes (público-alvo), para avaliar praticidade, clareza dos relatórios e potencial de apoio na tomada de decisão.
 
 ### Estratégia
-Este tópico descreve como o aluno comprovou que os objetivos foram alcançados, utilizando mecanismos tais como: simulação, pesquisa com usuários, entrevistas, questionários, entre outros, baseado em alguma norma, por exemplo, ISO. É importante deixar claro o contexto de validação, por exemplo, se for entrevista, quantos usuários, com quais perfis, em qual momento, etc.
+Simulação de pedidos em diferentes combinações, verificando se o relatório gera recomendações corretas.
 
 ### Consolidação dos Dados Coletados
-O aluno deve expressar os resultados, na forma de gráficos, médias, etc, trazendo uma discussão sobre a análise realizada acerca desses resultados.
+Os resultados serão consolidados em:
+
+Gráficos de barras e pizza (já implementados com Chart.js) para representar a distribuição de vendas e participação de pratos.
+
+Relatórios qualitativos com observações dos usuários sobre pontos fortes e pontos a melhorar.
 
 ## Conclusões
-Descrição de resultados obtidos ou considerações acerca da satisfação dos mesmos, retomando o problema identificado, os objetivos estabelecidos e a solução implementada.
+O PagZap com o módulo Otimizador de Cardápios demonstrou atender aos objetivos definidos:
+
+Permitiu gerenciar pedidos digitais e integrar pagamentos via API.
+
+Registrou e analisou vendas automaticamente.
+
+Gerou relatórios visuais que apoiam decisões estratégicas sobre o cardápio.
+
+Retomando o problema inicial (falta de gestão baseada em dados), o sistema mostrou-se capaz de fornecer informações concretas que reduzem desperdício, aumentam a rentabilidade e melhoram a competitividade de restaurantes.
 
 Limitações do Projeto e Perspectivas Futuras
-Discutir sobre as limitações do projeto e trabalhos futuros, envolvendo o TCC em questão.
+Banco de dados ainda em JSON local, sem robustez para ambientes de alta escala.
 
+Custos de produção dos pratos estimados de forma simplificada (percentual do preço).
+
+Testes limitados a sandbox do Mercado Pago, sem simulação de transações reais.
+
+Perspectivas Futuras:
+
+Migrar para MySQL para escalabilidade.
+
+Calcular custos de forma mais precisa, incluindo insumos detalhados.
+
+Integrar relatórios de desempenho histórico (semanal/mensal).
+
+
+
+
+///////////////// SEM ALTERAÇÃO //////////////////
 ## Referências Bibliográficas
 Lista de todo material bibliográfico utilizado para a realização deste documento, incluindo: livros, sites, artigos, etc.
 
