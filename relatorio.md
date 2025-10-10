@@ -71,10 +71,6 @@ Essa abordagem oferece aos gestores uma visão clara e prática do desempenho do
 
 
 
-
-///// Sem Mudanças  
-
-
 ## Arquitetura
 
 Arquitetura
@@ -88,7 +84,6 @@ Camada de Aplicação (Back-end): servidor em Node.js com Express, responsável 
 Camada de Dados: persistência em db.json (simulação de banco local), podendo evoluir para MySQL em produção.
 
 Serviços Externos: integração com a API Mercado Pago (pagamentos sandbox).
-
 
 
 ## Validação
