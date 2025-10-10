@@ -85,8 +85,10 @@ Camada de Dados: persistência em db.json (simulação de banco local), podendo 
 
 Serviços Externos: integração com a API Mercado Pago (pagamentos sandbox).
 
+
 ## Artefatos
 https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/modelagem%20de%20negocio.pdf
+https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/Gustavo%20-%202025-2%20-%20PD2%20-%20Entrega%201%20-%20Definição%20do%20Projeto.pdf
 
 
 ## Validação
