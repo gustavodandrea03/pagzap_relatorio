@@ -85,6 +85,9 @@ Camada de Dados: persistência em db.json (simulação de banco local), podendo 
 
 Serviços Externos: integração com a API Mercado Pago (pagamentos sandbox).
 
+## Artefatos
+
+
 
 ## Validação
 Validação
