@@ -81,18 +81,22 @@ https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/modelagem%20de%20
 - Elevator Pitch - É, Não É, Faz, Não Faz - Canvas MVP:
 
  ...
+ 
 https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/Gustavo%20-%202025-2%20-%20PD2%20-%20Entrega%201%20-%20Definição%20do%20Projeto.pdf
 - Definição do Projeto:
 
 ...
+
 https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/diagrama_de_sequencia.png
 - Diagrama de Sequência:
 
 ...
+
 https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/Benchmarking_PagZap.xlsx 
 - Benchmarking
 
 ...
+
 https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/JSON%20Schema.pdf
 - JSON Schema
 
