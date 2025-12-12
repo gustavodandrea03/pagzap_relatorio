@@ -78,14 +78,88 @@ Serviços Externos: Integração com a API Mercado Pago (pagamentos sandbox).
 ## Artefatos
 https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/modelagem%20de%20negocio.pdf
 https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/Gustavo%20-%202025-2%20-%20PD2%20-%20Entrega%201%20-%20Definição%20do%20Projeto.pdf
+https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/diagrama_de_sequencia.png
+
+1. JSON Schema para o Objeto Prato (Coleção Pratos)
+
+{
+  "title": "Prato do Cardápio",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "ID único do prato (gerado automaticamente)."
+    },
+    "nome": {
+      "type": "string",
+      "description": "Nome do item do cardápio (Ex: Lasanha Bolonhesa)."
+    },
+    "preco": {
+      "type": "number",
+      "format": "float",
+      "description": "Preço de venda ao cliente (R$)."
+    },
+    "categoria": {
+      "type": "string",
+      "enum": ["Pratos", "Lanches", "Bebidas", "Sobremesas", "Outros"],
+      "description": "Categoria de Menu Engineering para o item."
+    },
+    "imagem": {
+      "type": "string",
+      "description": "URL ou caminho local para a imagem do prato."
+    }
+  },
+  "required": ["id", "nome", "preco", "categoria"]
+}
 
 
 
 
-![Uploading diagrama_de_sequencia.png…]()
+2. JSON Schema para o Objeto Pedido (Coleção Pedidos)
 
-
-
+{
+  "title": "Pedido/Comanda",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "ID único do pedido/transação (usado para o PIX)."
+    },
+    "mesa": {
+      "type": "string",
+      "description": "Número da mesa associada ao pedido."
+    },
+    "dataHora": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp da criação do pedido."
+    },
+    "total": {
+      "type": "number",
+      "format": "float",
+      "description": "Valor total final do pedido."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pendente", "pago", "comendo", "livre"],
+      "description": "Status atual do pedido."
+    },
+    "itens": {
+      "type": "array",
+      "description": "Lista de itens pedidos.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "nome": {"type": "string"},
+          "preco": {"type": "number"},
+          "quantidade": {"type": "integer"},
+          "custo": {"type": "number", "description": "Custo estimado (usado para cálculo de margem)."}
+        }
+      }
+    }
+  },
+  "required": ["id", "mesa", "total", "status", "itens"]
+}
 
 
 
