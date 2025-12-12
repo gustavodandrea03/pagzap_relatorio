@@ -77,10 +77,9 @@ Serviços Externos: Integração com a API Mercado Pago (pagamentos sandbox).
 
 ## Artefatos
 Elevator Pitch - É, Não É, Faz, Não Faz - Canvas MVP: https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/modelagem%20de%20negocio.pdf
-https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/Gustavo%20-%202025-2%20-%20PD2%20-%20Entrega%201%20-%20Definição%20do%20Projeto.pdf
-https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/diagrama_de_sequencia.png
-
-benchmarking: https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/Benchmarking_PagZap.xlsx
+Definição do Projeto: https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/Gustavo%20-%202025-2%20-%20PD2%20-%20Entrega%201%20-%20Definição%20do%20Projeto.pdf
+Diagrama de Sequência: https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/diagrama_de_sequencia.png
+Benchmarking: https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/Benchmarking_PagZap.xlsx
 
 
 
