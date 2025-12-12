@@ -1,4 +1,4 @@
-# Documentando um Projeto Final de ADS/SPI/CD
+# PagZap: Solução Inteligente para Restaurantes
 
 _Gustavo D´andrea_
 
@@ -6,8 +6,7 @@ Este artigo tem como objetivo ilustrar a documentação de um projeto final na u
 
 ## Resumo do Projeto
 
-Restaurantes frequentemente enfrentam dificuldades na gestão de cardápios, mantendo pratos que não são rentáveis ou pouco procurados. Essa falta de controle impacta negativamente os lucros, aumenta o desperdício de ingredientes e reduz a competitividade no mercado. O sistema PagZap foi desenvolvido como uma solução inteligente para apoiar restaurantes na gestão de pedidos e pagamentos digitais, e agora foi expandido para incluir um Otimizador de Cardápios baseado em análise de dados. Essa evolução permite que os gestores tomem decisões estratégicas sobre quais pratos devem ser promovidos, ajustados ou removidos, resultando em maior rentabilidade e eficiência operacional.
-
+Restaurantes frequentemente enfrentam dificuldades na gestão de cardápios, mantendo pratos que não são rentáveis ou pouco procurados. Essa falta de controle impacta negativamente os lucros, aumenta o desperdício de ingredientes e reduz a competitividade no mercado. O sistema PagZap foi desenvolvido como uma solução integrada para gestão de pedidos e pagamentos digitais, e foi expandido para incluir o módulo Otimizador de Cardápios (Menu Engineering). Essa evolução permite que os gestores tomem decisões estratégicas sobre quais pratos devem ser promovidos, ajustados ou removidos (Estrela, Arado, Quebra-cabeça, Cão), resultando em maior rentabilidade e eficiência operacional.
 
 ## Definição do Problema
 
@@ -15,24 +14,25 @@ A gestão de cardápios em restaurantes é frequentemente realizada de forma emp
 
 De acordo com um levantamento do SEBRAE (2023), cerca de 34% dos restaurantes encerram suas atividades em até dois anos, sendo o mau controle de custos e a má gestão dos insumos fatores determinantes para esse cenário. Nesse contexto, soluções digitais que apoiem a análise de rentabilidade dos pratos tornam-se fundamentais.
 
-Projetos correlatos incluem sistemas de PDV (Ponto de Venda) que registram pedidos e estoques, mas em sua maioria não oferecem relatórios inteligentes de otimização de cardápio. O diferencial do PagZap está na integração entre pedidos digitais via QR Code, pagamento online com API do Mercado Pago e o novo módulo de análise inteligente do cardápio, que transforma dados de vendas em recomendações práticas.
+Projetos correlatos incluem sistemas de PDV (Ponto de Venda) que registram pedidos e estoques, mas em sua maioria não oferecem relatórios inteligentes de otimização de cardápio. O diferencial do PagZap está na integração entre pedidos digitais via QR Code, a simulação de pagamento PIX instantâneo via Mercado Pago e o novo módulo de Engenharia de Cardápio, que classifica os pratos em categorias estratégicas (Estrela, Arado, Quebra-cabeça e Cão) para transformar dados de vendas em recomendações práticas.
 
 
 ## Objetivos
 
-Objetivo Geral:
-
-Desenvolver uma solução web integrada que permita a restaurantes otimizar seus cardápios a partir da análise de dados de vendas e rentabilidade dos pratos, aliando gestão de pedidos e pagamentos digitais.
+Objetivos
+Objetivo Geral: Desenvolver uma solução web integrada que permita a restaurantes otimizar seus cardápios a partir da análise de dados de vendas e rentabilidade dos pratos, utilizando a metodologia de Engenharia de Cardápio, aliando gestão de pedidos e pagamentos digitais.
 
 Objetivos Específicos:
 
-Implementar um sistema de pedidos digitais com integração ao Mercado Pago para facilitar o processo de pagamento.
+Implementar um sistema de pedidos digitais com simulação de pagamento PIX (Checkout Transparente) para facilitar o processo de pagamento.
 
 Registrar automaticamente o histórico de vendas por prato.
 
 Desenvolver relatórios visuais interativos (tabelas e gráficos) que exibam receita, margem de lucro e percentual de participação dos pratos.
 
-Fornecer recomendações inteligentes de otimização do cardápio (promover, revisar ou remover pratos).
+Fornecer recomendações inteligentes de otimização do cardápio, classificando pratos em categorias estratégicas de Engenharia de Cardápio (Estrela, Arado, Quebra-cabeça, Cão).
+
+Melhorar a usabilidade das interfaces de Gestão e Cliente, proporcionando feedback visual rápido e fluxo de trabalho otimizado (Ex: Adicionar múltiplos itens ao pedido com um clique, entre outros).
 
 Reduzir desperdícios e apoiar gestores na tomada de decisão baseada em dados.
 
@@ -41,49 +41,38 @@ Reduzir desperdícios e apoiar gestores na tomada de decisão baseada em dados.
 
 O projeto foi desenvolvido com uma stack moderna e acessível, composta por:
 
-Front-end (HTML, CSS, JavaScript): Responsável pela interface do cliente e apresentação das comandas. Foi utilizada a biblioteca Chart.js para geração de gráficos interativos, devido à sua simplicidade e ampla documentação oficial (Chart.js, 2024
-).
+Front-end (HTML, CSS, JavaScript): Responsável pela interface do cliente e gestão. Foi utilizada a biblioteca Chart.js para geração de gráficos interativos, devido à sua simplicidade e ampla documentação oficial (Chart.js, 2024).
 
-Back-end (Node.js + Express): Estrutura responsável pelas rotas de pedidos, integração com pagamentos e análise de vendas. O Express foi escolhido por sua leveza e compatibilidade com REST APIs (Express.js, 2024
-).
+Back-end (Node.js + Express): Estrutura responsável pelas rotas de pedidos, integração com pagamentos e análise de vendas. O Express foi escolhido por sua leveza e compatibilidade com REST APIs (Express.js, 2024).
 
-Banco de Dados (JSON local / MySQL em expansão): Os pedidos e vendas foram inicialmente armazenados em arquivo JSON, simulando persistência. O MySQL será considerado em versões futuras para escalabilidade, por sua robustez e ampla utilização em sistemas corporativos (MySQL, 2024
-).
+Banco de Dados (JSON local): Os pedidos e vendas foram armazenados inicialmente em arquivo JSON, simulando persistência, permaneceu até o fim do desenvolvimento pela simplicidade e escolha pessoal.
 
-Integração de Pagamentos (API Mercado Pago): A API de Checkout Transparente foi utilizada em ambiente Sandbox para simular pagamentos online. Essa escolha garante praticidade e segurança, além de preparar o sistema para o uso real em produção (Mercado Pago Developers, 2024
-).
+Integração de Pagamentos (API Mercado Pago): A API de Checkout Transparente foi utilizada em ambiente Sandbox para simular pagamentos online e a geração do QR Code PIX. Essa escolha garante praticidade e segurança, além de preparar o sistema para o uso real em produção (Mercado Pago Developers, 2024).
 
 ## Descrição da Solução
 
-O PagZap é uma solução inteligente que unifica gestão de comandas digitais, pagamentos online e análise de cardápio em uma única plataforma.
+O PagZap é uma solução inteligente que unifica gestão de comandas digitais, pagamentos online e análise de cardápio em uma única plataforma, dividida em três interfaces principais:
 
-No processo de uso, o cliente acessa o cardápio digital via QR Code, seleciona os itens desejados e finaliza o pedido, que é enviado automaticamente à cozinha e registrado no sistema. Em seguida, o sistema gera um link de pagamento pelo Mercado Pago.
-Paralelamente, cada pedido atualiza a base de dados de vendas, registrando a quantidade e receita por prato. Esses dados são processados pelo módulo Otimizador de Cardápios, que gera relatórios visuais em uma interface web dedicada.
+Interface do Cliente (QR Code): Acessível por link direto (index.html?mesa=X), apresenta o cardápio com um visual moderno e responsivo. Permite ao cliente adicionar múltiplos itens ao pedido com um único clique (com feedback visual de seleção), visualizar o resumo do pedido e gerar o pagamento PIX. O fluxo de pagamento é simplificado para simular uma transação real, focando no QR Code.
 
-O relatório exibe:
-Tabela detalhada com quantidade vendida, receita total, margem em R$, percentual de margem e recomendação (promover, revisar, remover).
+Painel da Cozinha: Exibe os pedidos recebidos em tempo real para controle de produção (não detalhado aqui).
 
-Gráfico de Barras com a receita absoluta por prato.
+Interface do Gestor (gestor.html): Permite o Cadastro, Edição e Remoção (CRUD) dos itens do cardápio. O painel também exibe estatísticas resumidas (Total de Pratos, Categorias e Vendas) e o link para o relatório analítico.
 
-Gráfico de Pizza com a participação percentual de cada prato no faturamento total.
-
-Essa abordagem oferece aos gestores uma visão clara e prática do desempenho do cardápio, permitindo decisões estratégicas embasadas em dados. Como consequência, espera-se uma redução do desperdício de insumos, maior eficiência operacional e aumento da lucratividade dos restaurantes que adotarem a solução.
-
+O coração da solução é o Módulo de Engenharia de Cardápio, que processa as vendas registradas e classifica dinamicamente cada prato em uma das quatro categorias estratégicas (Estrela, Arado, Quebra-cabeça, Cão), baseando-se na Popularidade Média e na Margem de Lucro Média do cardápio. O resultado é apresentado de forma visual e tabulada no relatório, oferecendo ações diretas (promover, revisar, remover) aos gestores.
 
 
 ## Arquitetura
 
-Arquitetura
+O projeto está organizado em camadas simples, refletindo uma arquitetura Cliente-Servidor:
 
-O projeto está organizado em camadas simples, refletindo uma arquitetura cliente-servidor:
+Camada de Apresentação (Front-end): Interfaces web (HTML/CSS/JS) para o Cliente e Gestor.
 
-Camada de Apresentação (Front-end): interfaces web desenvolvidas em HTML, CSS e JavaScript, acessíveis por navegadores.
+Camada de Aplicação (Back-end): Servidor em Node.js com Express, responsável pela lógica de negócios, geração de relatórios de Menu Engineering e integração com a API Mercado Pago.
 
-Camada de Aplicação (Back-end): servidor em Node.js com Express, responsável por rotas de pedidos, integração com pagamentos e geração de relatórios.
+Camada de Dados: Persistência em db.json (simulação de banco local).
 
-Camada de Dados: persistência em db.json (simulação de banco local), podendo evoluir para MySQL em produção.
-
-Serviços Externos: integração com a API Mercado Pago (pagamentos sandbox).
+Serviços Externos: Integração com a API Mercado Pago (pagamentos sandbox).
 
 
 ## Artefatos
@@ -91,50 +80,63 @@ https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/modelagem%20de%20
 https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/Gustavo%20-%202025-2%20-%20PD2%20-%20Entrega%201%20-%20Definição%20do%20Projeto.pdf
 
 
+
+
+![Uploading diagrama_de_sequencia.png…]()
+
+
+
+
+
+
+
 ## Validação
-Validação
 
-A validação do sistema será realizada em duas etapas:
+A validação foi dividida em duas frentes:
 
-Testes funcionais: criação de pedidos, pagamentos simulados via Mercado Pago Sandbox e análise automática de vendas.
+Validação Funcional e Técnica: Testes de ponta a ponta (Estratégia de Validação por Simulação, já prevista).
 
-Avaliação com usuários reais: pesquisa com  gestores e funcionários de restaurantes (público-alvo), para avaliar praticidade, clareza dos relatórios e potencial de apoio na tomada de decisão.
+Validação de Usabilidade e Conformidade (Substituindo Pesquisa Real): Esta etapa comprovou que a solução está alinhada com as necessidades do público-alvo, utilizando:
+
+Avaliação Heurística Simplificada: Feedbacks qualitativos coletados de colegas e mentores, focando na praticidade das interfaces (Gestor e Cliente) e no fluxo de trabalho.
+
+Validação de Clareda de Relatórios (Conformidade com a Metodologia): O relatório de Engenharia de Cardápio foi validado por sua aderência total à Matriz de Engenharia de Cardápio padrão da indústria (Estrela, Arado, Quebra-cabeça, Cão), comprovando que as recomendações são as esperadas e que o relatório é claro o suficiente para a tomada de decisão gerencial, conforme o padrão de referência (Kasavana & Smith, década de 80).
 
 ### Estratégia
 Simulação de pedidos em diferentes combinações, verificando se o relatório gera recomendações corretas.
 
 ### Consolidação dos Dados Coletados
-Os resultados serão consolidados em:
+Os resultados da validação funcional demonstraram que o sistema gera relatórios com clareza e potencial de apoio na tomada de decisão. A matriz de Menu Engineering, baseada em dados reais simulados, classifica os pratos em quatro quadrantes.
 
-Gráficos de barras e pizza (já implementados com Chart.js) para representar a distribuição de vendas e participação de pratos.
+A clássica nomenclatura da indústria (Estrela, Arado, Quebra-cabeça, Cão) é autoexplicativa e dispensa treinamento complexo, pois cada classificação implica em uma ação gerencial imediata e clara (promover, revisar, remover ou reajustar preço).
 
-Relatórios qualitativos com observações dos usuários sobre pontos fortes e pontos a melhorar.
+O design visual dos relatórios (uso de gráficos do Chart.js) e a interface limpa do Gestor foram validados por feedbacks qualitativos (de pares e mentores) como práticos e intuitivos, mitigando a necessidade de grandes testes de usabilidade com usuários finais nesta fase.
 
-## Conclusões
-O PagZap com o módulo Otimizador de Cardápios demonstrou atender aos objetivos definidos:
+### Limitações do Projeto e Perspectivas Futuras
 
-Permitiu gerenciar pedidos digitais e integrar pagamentos via API.
+Limitações:
 
-Registrou e analisou vendas automaticamente.
+Ausência de validação empírica (Testes AB): O potencial de aumento de lucratividade não pôde ser medido em um cenário real com usuários finais e pedidos reais.
 
-Gerou relatórios visuais que apoiam decisões estratégicas sobre o cardápio.
-
-Retomando o problema inicial (falta de gestão baseada em dados), o sistema mostrou-se capaz de fornecer informações concretas que reduzem desperdício, aumentam a rentabilidade e melhoram a competitividade de restaurantes.
-
-Limitações do Projeto e Perspectivas Futuras
-Banco de dados ainda em JSON local, sem robustez para ambientes de alta escala.
-
-Custos de produção dos pratos estimados de forma simplificada (percentual do preço).
-
-Testes limitados a sandbox do Mercado Pago, sem simulação de transações reais.
+...
 
 Perspectivas Futuras:
 
-Migrar para MySQL para escalabilidade.
+- Migrar para MySQL para escalabilidade.
 
-Calcular custos de forma mais precisa, incluindo insumos detalhados.
+Implementação de Testes Controlados em Campo (A/B Testing): Após a migração para MySQL, o sistema poderá ser implantado em um parceiro real para medir o impacto da Engenharia de Cardápio nas vendas e na margem de lucro, comprovando os resultados.
 
-Integrar relatórios de desempenho histórico (semanal/mensal).
+## Conclusões
+Conclusões
+O PagZap com o módulo Otimizador de Cardápios demonstrou atender aos objetivos definidos:
+
+Permitiu gerenciar pedidos digitais, pagamentos via API e cadastro de pratos com usabilidade aprimorada.
+
+Registrou e analisou vendas automaticamente, aplicando a metodologia de Engenharia de Cardápio.
+
+Gerou relatórios visuais que apoiam decisões estratégicas sobre a rentabilidade do cardápio.
+
+Retomando o problema inicial (falta de gestão baseada em dados), o sistema mostrou-se capaz de fornecer informações concretas que, quando seguidas, reduzem desperdício, aumentam a rentabilidade e melhoram a competitividade de restaurantes.
 
 
 ## Referências Bibliográficas
