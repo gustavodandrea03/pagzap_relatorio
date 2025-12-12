@@ -80,6 +80,7 @@ https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/modelagem%20de%20
 https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/Gustavo%20-%202025-2%20-%20PD2%20-%20Entrega%201%20-%20Definição%20do%20Projeto.pdf
 https://github.com/gustavodandrea03/pagzap_relatorio/blob/main/diagrama_de_sequencia.png
 
+[Benchmarking_PagZap.xlsx](https://github.com/user-attachments/files/24135268/Benchmarking_PagZap.xlsx)
 
 
 
